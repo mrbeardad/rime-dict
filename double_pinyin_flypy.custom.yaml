@@ -1,0 +1,69 @@
+# Copyright (c) 2020-2021 Heachen Bear & Contributors
+# File: double_pinyin_flypy.custom.yaml
+# License: GPLv3
+# Author: Heachen Bear <mrbeardad@qq.com>
+# Date: 19.02.2021
+# Last Modified Date: 19.02.2021
+# Last Modified By: Heachen Bear <mrbeardad@qq.com>
+
+patch:
+  # 載入朙月拼音擴充詞庫
+  "translator/dictionary": luna_pinyin.extended
+
+  # 標點符號
+  "punctuator/import_preset": mysymbols
+  "recognizer/patterns/punct": "^/([a-z]+|[0-9])$"
+
+  # 默认繁體、默认英文
+  "switches/@2/reset": 1
+  # "switches/@0/reset": 1
+
+  "key_binder/bindings":
+    - { when: always, accept: Control+period, toggle: ascii_punct }
+
+  'speller/algebra':
+    - erase/^xx$/
+    - derive/^([jqxy])u$/$1v/
+    - derive/^([aoe])([ioun])$/$1$1$2/
+    - xform/^([aoe])(ng)?$/$1$1$2/
+    - xform/iu$/Q/
+    - xform/(.)ei$/$1W/
+    - xform/uan$/R/
+    - xform/[uv]e$/T/
+    - xform/un$/Y/
+    - xform/^sh/U/
+    - xform/^ch/I/
+    - xform/^zh/V/
+    - xform/uo$/O/
+    - xform/ie$/P/
+    - xform/i?ong$/S/
+    - xform/ing$/K/
+    - xform/uai$/K/
+    - xform/(.)ai$/$1D/
+    - xform/(.)en$/$1F/
+    - xform/(.)eng$/$1G/
+    - xform/[iu]ang$/L/
+    - xform/(.)ang$/$1H/
+    - xform/ian$/M/
+    - xform/(.)an$/$1J/
+    - xform/(.)ou$/$1Z/
+    - xform/[iu]a$/X/
+    - xform/iao$/N/
+    - xform/(.)ao$/$1C/
+    - xform/ui$/V/
+    - xform/in$/B/
+    - xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/
+    # - abbrev/^(.).+$/$1/
+
+  # 載入unicode-emoji
+  switches/@next:
+    name: emoji_suggestion
+    reset: 1
+    states: [ "🈚️️\uFE0E", "🈶️️\uFE0F" ]
+  'engine/filters/@before 0':
+    simplifier@emoji_suggestion
+  emoji_suggestion:
+    opencc_config: emoji.json
+    option_name: emoji_suggestion
+    tips: all
+

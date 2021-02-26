@@ -2,15 +2,15 @@ __build_info:
   rime_version: 1.7.2
   timestamps:
     default: 1612771620
-    default.custom: 1614246178
+    default.custom: 1614319980
     grammar: 0
     key_bindings: 1612771620
     key_bindings.custom: 0
     luna_pinyin.custom: 0
     luna_pinyin.schema: 1612176022
-    luna_pinyin_simp.custom: 1614242935
+    luna_pinyin_simp.custom: 1614315695
     luna_pinyin_simp.schema: 1612176022
-    mysymbols: 1614242935
+    mysymbols: 1614327429
     mysymbols.custom: 0
     pinyin: 1612176022
     pinyin.custom: 0
@@ -127,34 +127,34 @@ punctuator:
   half_shape:
     "!": {commit: "！"}
     "\"": {pair: ["“", "”"]}
-    "#": ["#"]
+    "#": "#"
     "$": ["￥", "$", "€", "£", "¥", "¢", "¤", "₩"]
     "%": ["%", "％", "°", "℃", "‰", "‱", "℉", "℅", "℆", "℀", "℁", "⅍"]
     "&": "&"
     "'": {pair: ["‘", "’"]}
     "(": "（"
     ")": "）"
-    "*": ["*"]
+    "*": "*"
     "+": "+"
     ",": {commit: "，"}
     "-": "-"
     .: {commit: "。"}
-    "/": ["、", "､", "/", "／", "÷"]
+    "/": ["/", "、", "､", "／", "÷"]
     ":": {commit: "："}
     ";": {commit: "；"}
     "<": ["《", "〈", "«", "‹", "˂", "˱"]
-    "=": ["="]
+    "=": "="
     ">": ["》", "〉", "»", "›", "˃", "˲"]
     "?": {commit: "？"}
     "@": ["@", "©", "®", "℗"]
     "[": ["「", "【", "〔", "［", "〚", "〘"]
-    "\\": ["、", "\\", "＼"]
+    "\\": "、"
     "]": ["」", "】", "〕", "］", "〛", "〙"]
     "^": {commit: "……"}
     _: "——"
     "`": ["`", "‵", "‶", "‷", "′", "″", "‴", "⁗"]
     "{": ["『", "〖", "｛"]
-    "|": ["|"]
+    "|": "|"
     "}": ["』", "〗", "｝"]
     "~": ["~", "～", "˜", "˷", "ⸯ", "≈", "≋", "≃", "≅", "≇", "∽", "⋍", "≌", "﹏", "﹋", "﹌", "︴"]
   import_preset: mysymbols
@@ -410,7 +410,7 @@ speller:
   delimiter: " '"
 switches:
   - name: ascii_mode
-    reset: 0
+    reset: 1
     states: ["中文", "西文"]
   - name: full_shape
     states: ["半角", "全角"]

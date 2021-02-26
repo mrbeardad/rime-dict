@@ -2,12 +2,12 @@ __build_info:
   rime_version: 1.7.2
   timestamps:
     default: 1612771620
-    default.custom: 1614246178
-    double_pinyin_flypy.custom: 1614242932
-    double_pinyin_flypy.schema: 1584212952
+    default.custom: 1614319980
+    double_pinyin_flypy.custom: 1614327218
+    double_pinyin_flypy.schema: 1614322741
     key_bindings: 1612771620
     key_bindings.custom: 0
-    mysymbols: 1614242935
+    mysymbols: 1614327429
     mysymbols.custom: 0
     punctuation: 1612771620
     punctuation.custom: 0
@@ -114,34 +114,34 @@ punctuator:
   half_shape:
     "!": {commit: "！"}
     "\"": {pair: ["“", "”"]}
-    "#": ["#"]
+    "#": "#"
     "$": ["￥", "$", "€", "£", "¥", "¢", "¤", "₩"]
     "%": ["%", "％", "°", "℃", "‰", "‱", "℉", "℅", "℆", "℀", "℁", "⅍"]
     "&": "&"
     "'": {pair: ["‘", "’"]}
     "(": "（"
     ")": "）"
-    "*": ["*"]
+    "*": "*"
     "+": "+"
     ",": {commit: "，"}
     "-": "-"
     .: {commit: "。"}
-    "/": ["、", "､", "/", "／", "÷"]
+    "/": ["/", "、", "､", "／", "÷"]
     ":": {commit: "："}
     ";": {commit: "；"}
     "<": ["《", "〈", "«", "‹", "˂", "˱"]
-    "=": ["="]
+    "=": "="
     ">": ["》", "〉", "»", "›", "˃", "˲"]
     "?": {commit: "？"}
     "@": ["@", "©", "®", "℗"]
     "[": ["「", "【", "〔", "［", "〚", "〘"]
-    "\\": ["、", "\\", "＼"]
+    "\\": "、"
     "]": ["」", "】", "〕", "］", "〛", "〙"]
     "^": {commit: "……"}
     _: "——"
     "`": ["`", "‵", "‶", "‷", "′", "″", "‴", "⁗"]
     "{": ["『", "〖", "｛"]
-    "|": ["|"]
+    "|": "|"
     "}": ["』", "〗", "｝"]
     "~": ["~", "～", "˜", "˷", "ⸯ", "≈", "≋", "≃", "≅", "≇", "∽", "⋍", "≌", "﹏", "﹋", "﹌", "︴"]
   import_preset: mysymbols
@@ -394,8 +394,7 @@ speller:
     - "xform/uo$/O/"
     - "xform/ie$/P/"
     - "xform/i?ong$/S/"
-    - "xform/ing$/K/"
-    - "xform/uai$/K/"
+    - "xform/ing$|uai$/K/"
     - "xform/(.)ai$/$1D/"
     - "xform/(.)en$/$1F/"
     - "xform/(.)eng$/$1G/"
@@ -414,7 +413,7 @@ speller:
   delimiter: " '"
 switches:
   - name: ascii_mode
-    reset: 0
+    reset: 1
     states: ["中文", "西文"]
   - name: full_shape
     states: ["半角", "全角"]

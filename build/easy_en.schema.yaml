@@ -2,8 +2,8 @@ __build_info:
   rime_version: 1.7.2
   timestamps:
     default: 1612771620
-    default.custom: 1614246178
-    easy_en.custom: 0
+    default.custom: 1614319980
+    easy_en.custom: 1614322113
     easy_en.schema: 1614226331
     key_bindings: 1612771620
     key_bindings.custom: 0

@@ -6,7 +6,7 @@ patch:
   "punctuator/import_preset": mysymbols
 
   # 默认英文
-  # "switches/@0/reset": 1
+  "switches/@0/reset": 1
 
   "key_binder/bindings":
     - { when: always, accept: Control+period, toggle: ascii_punct }

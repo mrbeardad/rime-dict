@@ -1,0 +1,4 @@
+# 若不想使用连续输入，或者发现Easy English无法正常使用时，则删除下列3行行前的#号
+# patch:
+#   engine/filters:
+#     - uniquifier

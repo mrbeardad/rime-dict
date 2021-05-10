@@ -2,7 +2,7 @@ var:
   last_build_time: 1618277546
   previously_selected_schema: double_pinyin_flypy
   schema_access_time:
-    double_pinyin_flypy: 1617853495
-    easy_en: 1614766954
+    double_pinyin_flypy: 1620283787
+    easy_en: 1620283670
     easy_english: 1614319532
     luna_pinyin_simp: 1617853481
